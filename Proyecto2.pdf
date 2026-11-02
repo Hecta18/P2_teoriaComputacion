@@ -1,0 +1,346 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R 12 0 R 14 0 R] /Count 5 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 7 0 R >>
+endobj
+7 0 obj
+<< /Length 4863 >>
+stream
+BT /F2 19.00 Tf 1 0 0 1 50.00 788.00 Tm (Proyecto 2 - Reconocimiento con gramaticas libres de) Tj ET
+BT /F2 19.00 Tf 1 0 0 1 50.00 764.25 Tm (contexto) Tj ET
+BT /F2 14.00 Tf 1 0 0 1 50.00 726.50 Tm (1. Gramatica) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 706.00 Tm (La gramatica es G = \(V, Sigma, S, P\), con:) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 62.00 689.00 Tm (- V = {S, VP, PP, NP, V, P, N, Det}) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 62.00 675.50 Tm (- Sigma = {a, beer, cake, cat, cooks, cuts, dog, drinks, eats, fork, he, in, juice, knife,) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 62.00 662.00 Tm (  meat, oven, she, soup, spoon, the, with}) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 62.00 648.50 Tm (- S = S) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 635.00 Tm (Producciones:) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 614.00 Tm (S   -> NP VP) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 604.20 Tm (VP  -> VP PP | V NP | cooks | drinks | eats | cuts) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 594.40 Tm (PP  -> P NP) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 584.60 Tm (NP  -> Det N | he | she) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 574.80 Tm (V   -> cooks | drinks | eats | cuts) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 565.00 Tm (P   -> in | with) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 555.20 Tm (N   -> cat | dog | beer | cake | juice | meat | soup) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 545.40 Tm (N   -> fork | knife | oven | spoon) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 535.60 Tm (Det -> a | the) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 520.80 Tm (Hay 30 producciones, 8 no terminales y 21 terminales. Todas las producciones tienen la forma A) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 506.80 Tm (-> a o A -> B C. Por lo tanto, la gramatica esta en forma normal de Chomsky y puede usarse) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 492.80 Tm (directamente en CYK.) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 475.80 Tm (La gramatica genera oraciones formadas por un sintagma nominal seguido de un sintagma verbal.) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 461.80 Tm (El sintagma verbal puede ser un verbo, un verbo con objeto o un sintagma verbal seguido de uno) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 447.80 Tm (o mas sintagmas preposicionales. Los sintagmas preposicionales se adjuntan al VP, no al NP.) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 433.80 Tm (Por eso las frases de este lenguaje tienen una unica derivacion.) Tj ET
+BT /F2 14.00 Tf 1 0 0 1 50.00 406.80 Tm (2. Conversion de la gramatica a un PDA) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 386.30 Tm (Se usa la conversion estandar de una gramatica libre de contexto a un automata con pila no) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 372.30 Tm (determinista.) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 355.30 Tm (El PDA es M = \(Q, Sigma, Gamma, delta, q0, Z0, F\), con:) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 62.00 338.30 Tm (- Q = {q0, q1, q2}) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 62.00 324.80 Tm (- Sigma = alfabeto de terminales de G) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 62.00 311.30 Tm (- Gamma = V union Sigma union {Z0}) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 62.00 297.80 Tm (- q0 = estado inicial) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 62.00 284.30 Tm (- Z0 = simbolo inicial de la pila) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 62.00 270.80 Tm (- F = {q2}) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 257.30 Tm (Transiciones:) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 236.30 Tm (delta\(q0, epsilon, Z0\) = {\(q1, S Z0\)}) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 226.50 Tm (delta\(q1, epsilon, A\)  = {\(q1, alpha\) | A -> alpha pertenece a P}) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 216.70 Tm (delta\(q1, a, a\)        = {\(q1, epsilon\)} para cada terminal a) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 206.90 Tm (delta\(q1, epsilon, Z0\) = {\(q2, Z0\)}) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 192.10 Tm (La pila se escribe con el tope a la izquierda. El estado q1 expande no terminales y consume) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 178.10 Tm (terminales. El estado q2 es el unico estado de aceptacion.) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 161.10 Tm (La definicion de PDA conserva la estructura de un automata finito: estados, alfabeto de) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 147.10 Tm (entrada, estado inicial, transiciones y estados de aceptacion. Agrega el alfabeto de pila, el) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 133.10 Tm (simbolo inicial de pila y las operaciones de apilar y desapilar. En la implementacion, la pila) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 119.10 Tm (se guarda como una tupla con el fondo a la izquierda y el tope a la derecha; al imprimir se) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 105.10 Tm (invierte para mostrar el tope a la izquierda.) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 88.10 Tm (La transicion por producciones hace que el PDA sea no determinista cuando un no terminal tiene) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 74.10 Tm (varias producciones. La simulacion explora las configuraciones \(estado, entrada restante,) Tj ET
+BT /F1 8.00 Tf 1 0 0 1 271.50 25.00 Tm (Pagina 1 de 5) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 9 0 R >>
+endobj
+9 0 obj
+<< /Length 5421 >>
+stream
+BT /F1 10.50 Tf 1 0 0 1 50.00 792.00 Tm (pila\) y registra el camino que lleva a la aceptacion.) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 775.00 Tm (Resumen de transiciones por produccion:) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 754.00 Tm (delta\(q1, epsilon, S\)   -> q1 empujando S -> NP VP) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 744.20 Tm (delta\(q1, epsilon, VP\)  -> q1 empujando VP -> VP PP | V NP | cooks | drinks | eats | cuts) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 734.40 Tm (delta\(q1, epsilon, PP\)  -> q1 empujando PP -> P NP) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 724.60 Tm (delta\(q1, epsilon, NP\)  -> q1 empujando NP -> Det N | he | she) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 714.80 Tm (delta\(q1, epsilon, V\)   -> q1 empujando V -> cooks | drinks | eats | cuts) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 705.00 Tm (delta\(q1, epsilon, P\)   -> q1 empujando P -> in | with) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 695.20 Tm (delta\(q1, epsilon, N\)   -> q1 empujando N -> cat | dog | beer | cake | juice | meat | soup | fork) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 685.40 Tm (| knife | oven | spoon) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 675.60 Tm (delta\(q1, epsilon, Det\) -> q1 empujando Det -> a | the) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 665.80 Tm (delta\(q0, epsilon, Z0\)  -> q1 empujando S Z0) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 656.00 Tm (delta\(q1, a, a\)         -> q1 para cada terminal a) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 646.20 Tm (delta\(q1, epsilon, Z0\)  -> q2) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 631.40 Tm (La simulacion usa una cola de configuraciones y un conjunto de configuraciones visitadas para) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 617.40 Tm (evitar ciclos. Tambien aplica una poda: si la pila tiene mas simbolos que tokens restantes, la) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 603.40 Tm (rama se descarta, porque cada no terminal de esta gramatica deriva al menos un terminal.) Tj ET
+BT /F2 14.00 Tf 1 0 0 1 50.00 576.40 Tm (3. PDA determinista LR/SLR) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 555.90 Tm (Ademas del PDA no determinista, se construye un PDA determinista usando una tabla SLR\(1\).) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 538.90 Tm (Primero se calculan los conjuntos FIRST y FOLLOW. Luego se construye la coleccion canonica de) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 524.90 Tm (items LR\(0\) con las operaciones closure y goto. Con esos items se llena la tabla de acciones y) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 510.90 Tm (la tabla de gotos.) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 493.90 Tm (La tabla obtenida tiene:) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 472.90 Tm (Estados LR\(0\): 32) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 463.10 Tm (Acciones: 196) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 453.30 Tm (Gotos: 12) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 443.50 Tm (Conflictos: 0) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 428.70 Tm (No hay conflictos shift/reduce ni reduce/reduce. Por eso la gramatica es SLR\(1\) y el) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 414.70 Tm (reconocimiento puede hacerse de forma determinista con una pila de estados.) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 397.70 Tm (El algoritmo de parseo usa:) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 62.00 380.70 Tm (- Una pila de estados.) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 62.00 367.20 Tm (- Una pila de valores semanticos para construir el arbol de parseo.) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 62.00 353.70 Tm (- La entrada terminada en $.) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 340.20 Tm (En cada paso consulta la accion correspondiente al estado del tope y al simbolo de entrada. Si) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 326.20 Tm (la accion es shift, avanza la entrada y apila el nuevo estado. Si es reduce, reemplaza el lado) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 312.20 Tm (derecho de una produccion por su lado izquierdo y apila el estado de goto. Si es accept, la) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 298.20 Tm (cadena se acepta.) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 281.20 Tm (Este PDA determinista reconoce el mismo lenguaje que el PDA no determinista, pero en tiempo) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 267.20 Tm (lineal.) Tj ET
+BT /F2 14.00 Tf 1 0 0 1 50.00 240.20 Tm (4. Algoritmo CYK) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 219.70 Tm (CYK se aplica directamente porque la gramatica esta en CNF.) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 202.70 Tm (La tabla se define como tabla[i][j], donde la celda contiene los no terminales que derivan la) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 188.70 Tm (subcadena tokens[i:j].) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 171.70 Tm (El algoritmo es:) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 154.70 Tm (1. Para cada token, agregar los no terminales A tales que A -> token. 2. Para cada longitud) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 140.70 Tm (mayor que 1, probar todos los puntos de corte k. 3. Para cada produccion A -> B C, agregar A) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 126.70 Tm (si B esta en tabla[i][k] y C esta en tabla[k][j]. 4. Al final, la cadena se acepta si S esta) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 112.70 Tm (en tabla[0][n].) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 95.70 Tm (Ademas de la tabla, se guardan retroapuntadores. Cada vez que se agrega un no terminal se) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 81.70 Tm (registra el punto de corte y la produccion usada. Con esos datos se reconstruye el arbol de) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 67.70 Tm (parseo y la derivacion por la izquierda.) Tj ET
+BT /F1 8.00 Tf 1 0 0 1 271.50 25.00 Tm (Pagina 2 de 5) Tj ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 11 0 R >>
+endobj
+11 0 obj
+<< /Length 5045 >>
+stream
+BT /F2 14.00 Tf 1 0 0 1 50.00 792.00 Tm (5. Ejemplos y trazas) Tj ET
+BT /F2 12.00 Tf 1 0 0 1 50.00 763.50 Tm (5.1 Cadena valida: "he cooks") Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 746.50 Tm (PDA no determinista:) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 725.50 Tm (\(q0, he cooks, Z0\)) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 715.70 Tm (|- \(q1, he cooks, S Z0\)          [iniciar con S]) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 705.90 Tm (|- \(q1, he cooks, NP VP Z0\)      [expandir S -> NP VP]) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 696.10 Tm (|- \(q1, he cooks, he VP Z0\)      [expandir NP -> he]) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 686.30 Tm (|- \(q1, cooks, VP Z0\)            [consumir 'he']) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 676.50 Tm (|- \(q1, cooks, cooks Z0\)         [expandir VP -> cooks]) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 666.70 Tm (|- \(q1, epsilon, Z0\)             [consumir 'cooks']) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 656.90 Tm (|- \(q2, epsilon, Z0\)             [aceptar]) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 647.10 Tm (Resultado: ACEPTADA) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 637.30 Tm (Operaciones: total=35, transiciones=14, pila=19, comparaciones=2, configuraciones=12) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 622.50 Tm (PDA determinista LR/SLR:) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 601.50 Tm (Pila: 0              Entrada: he cooks        Accion: shift 5) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 591.70 Tm (Pila: 0 5            Entrada: cooks           Accion: reduce NP -> he) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 581.90 Tm (Pila: 0 2            Entrada: cooks           Accion: shift 22) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 572.10 Tm (Pila: 0 2 22         Entrada: epsilon         Accion: reduce VP -> cooks) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 562.30 Tm (Pila: 0 2 21         Entrada: epsilon         Accion: reduce S -> NP VP) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 552.50 Tm (Pila: 0 3            Entrada: epsilon         Accion: accept) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 542.70 Tm (Resultado: ACEPTADA) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 532.90 Tm (Operaciones: total=6, shifts=2, reducciones=3) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 518.10 Tm (Arbol de parseo:) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 497.10 Tm (S) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 487.30 Tm (|-- NP) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 477.50 Tm (|   |-- he) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 467.70 Tm (|-- VP) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 457.90 Tm (    |-- cooks) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 443.10 Tm (CYK:) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 422.10 Tm ([0,1\) 'he' += NP      \(NP -> he\)) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 412.30 Tm ([1,2\) 'cooks' += VP   \(VP -> cooks\)) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 402.50 Tm ([1,2\) 'cooks' += V    \(V -> cooks\)) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 392.70 Tm ([0,2\) 'he cooks' += S \(S -> NP VP; k=1, NP en [0,1\) y VP en [1,2\)\)) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 50.00 382.90 Tm () Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 373.40 Tm (Tabla:) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 363.60 Tm ([0,1\) 'he' -> {NP}) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 353.80 Tm ([1,2\) 'cooks' -> {V, VP}) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 344.00 Tm ([0,2\) 'he cooks' -> {S}) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 50.00 334.20 Tm () Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 324.70 Tm (Derivacion por la izquierda:) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 314.90 Tm (S => NP VP => he VP => he cooks) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 50.00 305.10 Tm () Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 295.60 Tm (Operaciones: total=59, terminales=50, binarias=5, inserciones=4) Tj ET
+BT /F2 12.00 Tf 1 0 0 1 50.00 272.80 Tm (5.2 Cadena invalida: "the cat eats cake") Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 255.80 Tm (Los tres metodos rechazan la cadena. La tabla CYK muestra que no se puede formar un NP para) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 241.80 Tm ("cake", porque falta un determinante. La celda final no contiene S:) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 220.80 Tm ([0,1\) 'the' -> {Det}) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 211.00 Tm ([1,2\) 'cat' -> {N}) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 201.20 Tm ([2,3\) 'eats' -> {V, VP}) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 191.40 Tm ([3,4\) 'cake' -> {N}) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 50.00 181.60 Tm () Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 172.10 Tm ([0,2\) 'the cat' -> {NP}) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 162.30 Tm ([1,3\) 'cat eats' -> {}) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 152.50 Tm ([2,4\) 'eats cake' -> {}) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 50.00 142.70 Tm () Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 133.20 Tm ([0,3\) 'the cat eats' -> {S}) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 123.40 Tm ([1,4\) 'cat eats cake' -> {}) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 50.00 113.60 Tm () Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 104.10 Tm ([0,4\) 'the cat eats cake' -> {}) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 50.00 94.30 Tm () Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 84.80 Tm (Resultado: RECHAZADA) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 75.00 Tm (Operaciones CYK: total=157, terminales=100, binarias=50, inserciones=7) Tj ET
+BT /F1 8.00 Tf 1 0 0 1 271.50 25.00 Tm (Pagina 3 de 5) Tj ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 13 0 R >>
+endobj
+13 0 obj
+<< /Length 6046 >>
+stream
+BT /F1 10.50 Tf 1 0 0 1 50.00 792.00 Tm (El PDA no determinista explora las ramas posibles y no alcanza q2 con la entrada consumida. El) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 778.00 Tm (PDA LR/SLR detecta el error cuando la tabla no tiene una accion valida para el estado actual.) Tj ET
+BT /F2 12.00 Tf 1 0 0 1 50.00 753.00 Tm (5.3 Resumen con el archivo de ejemplo) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 732.00 Tm (he cooks                                      ACEPTADA   ACEPTADA   ACEPTADA) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 722.20 Tm (she drinks the juice                          ACEPTADA   ACEPTADA   ACEPTADA) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 712.40 Tm (the cat eats the cake                         ACEPTADA   ACEPTADA   ACEPTADA) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 702.60 Tm (the dog drinks the beer in the oven           ACEPTADA   ACEPTADA   ACEPTADA) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 692.80 Tm (the cat cuts the meat with the knife          ACEPTADA   ACEPTADA   ACEPTADA) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 683.00 Tm (she eats the soup with the spoon in the oven  ACEPTADA   ACEPTADA   ACEPTADA) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 673.20 Tm (the cat cooks in the oven with the fork       ACEPTADA   ACEPTADA   ACEPTADA) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 663.40 Tm (the cat                                       RECHAZADA  RECHAZADA  RECHAZADA) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 653.60 Tm (eats the cake                                 RECHAZADA  RECHAZADA  RECHAZADA) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 643.80 Tm (the cat eats cake                             RECHAZADA  RECHAZADA  RECHAZADA) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 634.00 Tm (he cooks the                                  RECHAZADA  RECHAZADA  RECHAZADA) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 624.20 Tm (the cat in the oven                           RECHAZADA  RECHAZADA  RECHAZADA) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 614.40 Tm (cat eats the cake                             RECHAZADA  RECHAZADA  RECHAZADA) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 604.60 Tm (the cat eats the cake in                      RECHAZADA  RECHAZADA  RECHAZADA) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 589.80 Tm (En todos los casos los tres metodos coinciden.) Tj ET
+BT /F2 14.00 Tf 1 0 0 1 50.00 562.80 Tm (6. Tasa de crecimiento) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 542.30 Tm (El analisis se hizo contando operaciones, no midiendo tiempo. La familia de cadenas usada fue:) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 521.30 Tm (he cooks) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 511.50 Tm (he cooks in the cat) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 501.70 Tm (he cooks in the cat in the cat) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 491.90 Tm (...) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 477.10 Tm (Cada cadena tiene longitud n = 2 + 3k tokens.) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 460.10 Tm (Operaciones contadas:) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 62.00 443.10 Tm (- CYK: comprobaciones de producciones terminales y binarias, mas inserciones en la tabla.) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 62.00 429.60 Tm (- PDA no determinista: transiciones evaluadas, operaciones de pila y comparaciones de) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 62.00 416.10 Tm (  simbolos.) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 62.00 402.60 Tm (- PDA determinista: acciones de parseo, es decir, shifts, reducciones y aceptacion.) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 389.10 Tm (Resultados seleccionados:) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 368.10 Tm (k     n       CYK       NPDA      DPDA     CYK/n^3) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 358.30 Tm (0     2        59         35         6      7.3750) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 348.50 Tm (5    17      4544       2445        51      0.9249) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 338.70 Tm (12   38     46733      11993       114      0.8517) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 328.90 Tm (20   62    200249      31725       186      0.8402) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 319.10 Tm (25   77    382484      48835       231      0.8378) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 304.30 Tm (Ajustes empiricos:) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 283.30 Tm (CYK:  operaciones aproximadamente 0.84 * n^3) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 273.50 Tm (      pendiente local log-log = 2.9889) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 263.70 Tm (NPDA: operaciones aproximadamente 9.03 * n^1.9778) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 253.90 Tm (      pendiente local log-log = 1.9915) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 244.10 Tm (DPDA: operaciones aproximadamente 3.00 * n) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 234.30 Tm (      pendiente local log-log = 1.0000) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 219.50 Tm (Analisis asintotico:) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 198.50 Tm (Metodo   Tiempo                  Espacio) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 188.70 Tm (CYK      Theta\(n^3\)              Theta\(n^2\)) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 178.90 Tm (NPDA     peor caso exponencial   exponencial) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 169.10 Tm (DPDA     Theta\(n\)                Theta\(n\)) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 154.30 Tm (CYK es cubico porque recorre longitudes, posiciones iniciales, puntos de corte y producciones.) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 140.30 Tm (Con una gramatica fija, el numero de producciones es constante y el costo dominante es n^3.) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 123.30 Tm (El PDA no determinista tiene peor caso exponencial en general, porque la simulacion explora) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 109.30 Tm (configuraciones y la pila puede crecer. En esta gramatica, la poda por numero de simbolos en) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 95.30 Tm (la pila y la repeticion de estructuras hace que el crecimiento empirico sea cuadratico. Aun) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 81.30 Tm (asi, su constante y su cantidad de operaciones son mayores que las del PDA determinista.) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 64.30 Tm (El PDA LR/SLR es lineal porque cada token produce un shift y cada produccion reducida produce) Tj ET
+BT /F1 8.00 Tf 1 0 0 1 271.50 25.00 Tm (Pagina 4 de 5) Tj ET
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 15 0 R >>
+endobj
+15 0 obj
+<< /Length 4712 >>
+stream
+BT /F1 10.50 Tf 1 0 0 1 50.00 792.00 Tm (una reduccion. El numero de reducciones es proporcional al numero de nodos del arbol de) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 778.00 Tm (parseo, que es O\(n\). Su costo empirico es aproximadamente 3n operaciones.) Tj ET
+BT /F2 14.00 Tf 1 0 0 1 50.00 751.00 Tm (7. Comparacion de desempeno) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 730.50 Tm (CYK es un metodo ascendente, sistematico y polinomial. Llena toda la tabla, por lo que su) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 716.50 Tm (costo es cubico y su memoria cuadratica. Es apropiado para gramaticas en CNF y maneja) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 702.50 Tm (ambiguedad sin cambiar el algoritmo.) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 685.50 Tm (El PDA no determinista es la conversion directa de la gramatica. Su ventaja es que muestra el) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 671.50 Tm (funcionamiento de la pila y las descripciones instantaneas. Su desventaja es que debe explorar) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 657.50 Tm (varias ramas y, en el peor caso, puede tener crecimiento exponencial. En esta gramatica el) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 643.50 Tm (crecimiento observado es cuadratico, pero sigue siendo mas costoso que el PDA determinista.) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 626.50 Tm (El PDA determinista LR/SLR es el mas eficiente de los tres. Reconoce en tiempo lineal y) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 612.50 Tm (construye el arbol de parseo directamente. Su limitacion es que necesita que la gramatica) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 598.50 Tm (permita una tabla determinista sin conflictos. En este caso la gramatica es SLR\(1\), por lo que) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 584.50 Tm (el metodo se puede aplicar.) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 567.50 Tm (Comparacion para cadenas de la familia analizada:) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 62.00 550.50 Tm (- DPDA: alrededor de 3n operaciones.) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 62.00 537.00 Tm (- NPDA: alrededor de 9.03 n^1.98 operaciones.) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 62.00 523.50 Tm (- CYK: alrededor de 0.84 n^3 operaciones.) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 510.00 Tm (Para cadenas cortas, las diferencias son pequenas. Para cadenas largas, el crecimiento cubico) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 50.00 496.00 Tm (de CYK y el crecimiento cuadratico del NPDA hacen que el DPDA sea claramente mas eficiente.) Tj ET
+BT /F2 14.00 Tf 1 0 0 1 50.00 469.00 Tm (8. Conclusiones) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 62.00 448.50 Tm (- La gramatica esta en CNF, por lo que CYK se aplica sin transformaciones.) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 62.00 435.00 Tm (- La conversion CFG -> PDA produce un reconocedor no determinista correcto y permite mostrar) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 62.00 421.50 Tm (  descripciones instantaneas.) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 62.00 408.00 Tm (- La gramatica admite una tabla SLR\(1\) sin conflictos, lo que permite construir un PDA) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 62.00 394.50 Tm (  determinista lineal.) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 62.00 381.00 Tm (- Los tres metodos coinciden en todas las cadenas validas e invalidas probadas.) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 62.00 367.50 Tm (- CYK tiene tiempo Theta\(n^3\) y espacio Theta\(n^2\).) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 62.00 354.00 Tm (- El PDA determinista tiene tiempo Theta\(n\) y espacio Theta\(n\).) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 62.00 340.50 Tm (- El PDA no determinista tiene peor caso exponencial, aunque en esta gramatica el crecimiento) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 62.00 327.00 Tm (  empirico observado es cuadratico.) Tj ET
+BT /F2 14.00 Tf 1 0 0 1 50.00 303.50 Tm (9. Referencias) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 62.00 283.00 Tm (- Hopcroft, J. E., Motwani, R., Ullman, J. D. Introduction to Automata Theory, Languages, and) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 62.00 269.50 Tm (  Computation.) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 62.00 256.00 Tm (- Sipser, M. Introduction to the Theory of Computation.) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 62.00 242.50 Tm (- Aho, A. V., Lam, M. S., Sethi, R., Ullman, J. D. Compilers: Principles, Techniques, and) Tj ET
+BT /F1 10.50 Tf 1 0 0 1 62.00 229.00 Tm (  Tools.) Tj ET
+BT /F2 14.00 Tf 1 0 0 1 50.00 205.50 Tm (10. Ejecucion) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 181.00 Tm (python reconocer.py "the cat eats the cake") Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 171.20 Tm (python reconocer.py --archivo cadenas.txt) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 161.40 Tm (python analisis_crecimiento.py --max-k 25) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 151.60 Tm (python -m unittest discover -s tests -t . -v) Tj ET
+BT /F3 8.20 Tf 1 0 0 1 56.00 141.80 Tm (docker compose up --build) Tj ET
+BT /F1 8.00 Tf 1 0 0 1 271.50 25.00 Tm (Pagina 5 de 5) Tj ET
+endstream
+endobj
+xref
+0 16
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000148 00000 n 
+0000000245 00000 n 
+0000000347 00000 n 
+0000000442 00000 n 
+0000000588 00000 n 
+0000005503 00000 n 
+0000005649 00000 n 
+0000011122 00000 n 
+0000011270 00000 n 
+0000016368 00000 n 
+0000016516 00000 n 
+0000022615 00000 n 
+0000022763 00000 n 
+trailer
+<< /Size 16 /Root 1 0 R >>
+startxref
+27528
+%%EOF

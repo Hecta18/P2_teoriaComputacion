@@ -1,0 +1,17 @@
+# Frases validas
+he cooks
+she drinks the juice
+the cat eats the cake
+the dog drinks the beer in the oven
+the cat cuts the meat with the knife
+she eats the soup with the spoon in the oven
+the cat cooks in the oven with the fork
+
+# Frases invalidas
+the cat
+eats the cake
+the cat eats cake
+he cooks the
+the cat in the oven
+cat eats the cake
+the cat eats the cake in

@@ -1,0 +1,21 @@
+# Expresiones regulares del laboratorio.
+# Convención: E representa épsilon (también se acepta el carácter ε directo).
+# El marcador de fin '#' se añade automáticamente al construir el AFD;
+# El programa reconoce los "#" al inicio, por lo que no afectan estos comentarios
+(a*|b*)+
+((E|a)|b*)*
+(a|b)*abb(a|b)*
+0?(1?)?0*
+# --- Cadenas ---
+ab
+a
+b
+abb
+aba
+ε
+E
+
+010
+011
+00
+101

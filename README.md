@@ -1,12 +1,12 @@
 # Proyecto 2 - Teoria de la Computacion
 
-Reconocimiento de cadenas del lenguaje generado por la gramatica libre de contexto del proyecto. Se implementan tres reconocedores:
+Reconocimiento de cadenas del lenguaje generado por gramatica libre de contexto del proyecto. Se implementan tres reconocedores:
 
 1. PDA no determinista obtenido por la conversion formal CFG -> PDA.
 2. PDA determinista LR/SLR construido a partir de la tabla de parseo.
 3. Algoritmo CYK para gramaticas en forma normal de Chomsky.
 
-Todas las salidas de los reconocedores se imprimen por consola. El unico archivo que genera el proyecto es la documentacion PDF.
+Todas las salidas de los reconocedores se imprimen por consola.
 
 ## Requisitos
 
@@ -61,7 +61,7 @@ he cooks in the cat in the cat
 ...
 ```
 
-E imprime por consola el conteo de operaciones, los ratios y el ajuste asintotico empirico.
+Se imprime por consola el conteo de operaciones, los ratios y el ajuste asintotico empirico.
 
 ## Pruebas
 
@@ -95,12 +95,6 @@ Ejecutar el analisis de crecimiento:
 docker compose run --rm proyecto2 python analisis_crecimiento.py --max-k 25
 ```
 
-Generar la documentacion PDF:
-
-```bash
-docker compose run --rm proyecto2 python docs/generar_pdf.py
-```
-
 ## Estructura
 
 ```text
@@ -112,16 +106,14 @@ reconocer.py              Ejecuta los tres metodos y compara resultados
 analisis_crecimiento.py   Conteo de operaciones y ajuste empirico
 cadenas.txt               Cadenas de ejemplo
 tests/                    Pruebas unitarias
-docs/proyecto2.md         Fuente de la documentacion
-docs/generar_pdf.py       Generador de PDF sin dependencias
-docs/Proyecto2.pdf        Documento final
+Proyecto2.pdf             Documento final
 Dockerfile
 docker-compose.yml
 ```
 
 ## Documentacion
 
-El PDF contiene la definicion de la gramatica, la conversion a PDA, la construccion LR/SLR, el algoritmo CYK, ejemplos con trazas, el analisis de complejidad y la comparacion de desempeno.
+El PDF contiene: definicion de la gramatica, conversion a PDA, construccion LR/SLR, algoritmo CYK, ejemplos con trazas, analisis de complejidad y comparacion de desempeño.
 
 ## Video
 
